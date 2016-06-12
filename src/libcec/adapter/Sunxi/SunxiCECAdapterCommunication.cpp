@@ -236,11 +236,8 @@ bool CSunxiCECAdapterCommunication::SetLogicalAddresses(const cec_logical_addres
 
 void *CSunxiCECAdapterCommunication::Process(void)
 {
-  bool bHandled;
   hdmi_cec_event event;
   int ret;
-
-  uint32_t opcode, status;
   cec_logical_address initiator, destination;
 
   while (!IsStopped())
