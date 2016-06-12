@@ -100,6 +100,9 @@ set(CEC_HEADERS devices/CECRecordingDevice.h
                 adapter/RPi/RPiCECAdapterMessageQueue.h
                 adapter/RPi/RPiCECAdapterCommunication.h
                 adapter/RPi/RPiCECAdapterDetection.h
+                adapter/Sunxi/AdapterMessageQueue.h
+                adapter/Sunxi/SunxiCECAdapterCommunication.h
+                adapter/Sunxi/SunxiCECAdapterDetection.h
                 CECInputBuffer.h
                 platform/util/baudrate.h
                 platform/util/edid.h

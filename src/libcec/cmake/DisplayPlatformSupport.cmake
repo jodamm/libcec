@@ -38,6 +38,12 @@ else()
   message(STATUS "Exynos support:                         no")
 endif()
 
+if (HAVE_SUNXI_API)
+  message(STATUS "Sunxi support:                          yes")
+else()
+  message(STATUS "Sunxi support:                          no")
+endif()
+
 if (HAVE_DRM_EDID_PARSER)
   message(STATUS "DRM support:                            yes")
 else()

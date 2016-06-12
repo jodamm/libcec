@@ -99,6 +99,12 @@ To compile in support for TDA995x devices, you have to pass the argument -DHAVE_
 cmake -DHAVE_TDA995X_API=1 ..
 ```
 
+### Sunxi
+To compile in support for Sunxi devices, you have to pass the argument -DHAVE_SUNXI_LIB=1 to cmake:
+```
+cmake -DHAVE_SUNXI_LIB=1 ..
+```
+
 ### Debian
 Use the following commands to create a debian package:
 ```

@@ -28,6 +28,7 @@ set(HAVE_LIBUDEV 0)
 set(HAVE_RPI_API 0)
 set(HAVE_TDA995X_API 0)
 set(HAVE_EXYNOS_API 0)
+set(HAVE_SUNXI_API 0)
 set(HAVE_P8_USB_DETECT 0)
 set(HAVE_DRM_EDID_PARSER 0)
 # Pulse-Eight devices are always supported
@@ -132,6 +133,17 @@ else()
   else()
     set(HAVE_EXYNOS_API 0)
   endif()
+
+  # Sunxi
+  if (${HAVE_SUNXI_LIB})
+    set(LIB_INFO "${LIB_INFO}, Sunxi")
+    set(HAVE_SUNXI_API 1)
+    set(CEC_SOURCES_ADAPTER_SUNXI adapter/Sunxi/SunxiCECAdapterDetection.cpp
+                                  adapter/Sunxi/SunxiCECAdapterCommunication.cpp)
+    source_group("Source Files\\adapter\\Sunxi" FILES ${CEC_SOURCES_ADAPTER_SUNXI})
+    list(APPEND CEC_SOURCES ${CEC_SOURCES_ADAPTER_SUNXI})
+  endif()
+
 endif()
 
 # rt
