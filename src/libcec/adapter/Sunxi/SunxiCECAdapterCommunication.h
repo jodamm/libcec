@@ -35,8 +35,8 @@
 #include "adapter/AdapterCommunication.h"
 #include <map>
 
-#define SUNXI_ADAPTER_VID 0x0471 /*FIXME TBD*/
-#define SUNXI_ADAPTER_PID 0x1001
+#define SUNXI_ADAPTER_VID 0x0717 /*FIXME TBD*/
+#define SUNXI_ADAPTER_PID 0x1707
 
 
 
